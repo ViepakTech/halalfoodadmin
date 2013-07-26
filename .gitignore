@@ -5,8 +5,10 @@
 *.war
 
 # gwt caches and compiled units #
-war/gwt_bree/
+war/halalfoodadmin/
 gwt-unitCache/
+test-classes/
+www-test/
 
 # boilerplate generated classes #
 .apt_generated/
@@ -15,3 +17,5 @@ gwt-unitCache/
 war/WEB-INF/deploy/
 war/WEB-INF/classes/
 
+# App engine generated #
+war/WEB-INF/appengine-generated/
