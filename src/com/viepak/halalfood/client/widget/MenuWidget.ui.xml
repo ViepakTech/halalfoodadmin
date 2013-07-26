@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<g:MenuBar>
+			<g:MenuItem text="User Management">
+				<g:MenuBar vertical="true">
+					<g:MenuItem text="New" ui:field="menuNewUser"/>
+					<g:MenuItem text="Edit" ui:field="menuEditUser"/>
+					<g:MenuItem text="Delete" ui:field="menuDeleteUser"/>
+				</g:MenuBar>
+			</g:MenuItem>
+			<g:MenuItem text="Item Management">
+				<g:MenuBar vertical="true">
+					<g:MenuItem text="New" ui:field="menuNewItem"/>
+					<g:MenuItem text="Edit" ui:field="menuEditItem"/>
+					<g:MenuItem text="Delete" ui:field="menuDeleteItem"/>
+				</g:MenuBar>
+			</g:MenuItem>
+			<g:MenuItem text="Profile">
+				<g:MenuBar vertical="true">
+					<g:MenuItem text="Update" ui:field="menuUpdateProfile"/>
+					<g:MenuItem text="Logout" ui:field="menuLogoutProfile"/>
+				</g:MenuBar>
+			</g:MenuItem>
+		</g:MenuBar>
+	</g:HTMLPanel>
+</ui:UiBinder> 

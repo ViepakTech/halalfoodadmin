@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<g:AbsolutePanel height="136px" ui:field="LoginPanel">
+			<g:at left="10" top="22">
+				<g:Label text="Email:"/>
+			</g:at>
+			<g:at left="77" top="10">
+				<g:TextBox width="163px" height="18px" ui:field="txtEmail"/>
+			</g:at>
+			<g:at left="10" top="66">
+				<g:Label text="Password:"/>
+			</g:at>
+			<g:at left="77" top="50">
+				<g:PasswordTextBox ui:field="txtPassword"/>
+			</g:at>
+			<g:at left="77" top="91">
+				<g:Button width="50" height="30" ui:field="btnLogin">Login</g:Button>
+			</g:at>
+			<g:at left="130" top="91">
+				<g:Button width="50" height="30" ui:field="btnLogout" enabled="false">Logout</g:Button>
+			</g:at>
+		</g:AbsolutePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,9 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<g:HTMLPanel>
+	<g:Button ui:field="btnAddNewUser">Add New User</g:Button>
+	<hr/>
+	<p1:CellTable ui:field="userCellTable"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 
