@@ -17,7 +17,7 @@ import com.viepak.halalfood.shared.User;
 public interface UserManagement extends RemoteService {
 	User createUser(User user);
 	Boolean updateUser(User user);
-	Boolean deleteUser(String id);
+	Boolean deleteUser(User user);
 	List<User> getAllUser();
 	User login(String userName, String password);
 	Boolean logout(User user);

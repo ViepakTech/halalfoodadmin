@@ -33,10 +33,6 @@ import com.google.gwt.view.client.AsyncDataProvider;
 import com.google.gwt.view.client.HasData;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.view.client.ProvidesKey;
-import com.google.gwt.view.client.Range;
-import com.google.gwt.view.client.SelectionModel;
-import com.google.gwt.view.client.RangeChangeEvent.Handler;
-import com.sun.java.swing.plaf.windows.resources.windows;
 import com.viepak.halalfood.client.event.CreateUserEvent;
 import com.viepak.halalfood.client.event.CreateUserEventHandler;
 import com.viepak.halalfood.client.service.UserManagementAsync;
@@ -94,18 +90,18 @@ public class UserManagementWidget extends Composite implements Presenter {
 		return roleValues;
 	}
 	
-	private final NumberCell idCell  = new NumberCell();
+	private final Cell<String> idCell  = new TextCell();
 	private final TextInputCell nameCell = new TextInputCell();
 	private final SelectionCell roleCell = new SelectionCell(getRoleValues());
 	private final TextInputCell emailCell = new TextInputCell();
 	private final TextInputCell phoneNumberCell = new TextInputCell();
 	private final CheckboxCell isActiveCell = new CheckboxCell();
 	
-	private final Column<User, Number> idColumn = new Column<User, Number>(idCell) {
+	private final Column<User, String> idColumn = new Column<User, String>(idCell) {
 		
 		@Override
-		public Number getValue(User object) {
-			return object.getId();
+		public String getValue(User object) {
+			return object.getId() + "";
 		}
 	};
 	

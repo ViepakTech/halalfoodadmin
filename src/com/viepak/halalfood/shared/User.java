@@ -1,10 +1,18 @@
 package com.viepak.halalfood.shared;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 import com.google.gwt.user.client.rpc.IsSerializable;
 
-
+@Entity
 public class User implements IsSerializable  {
-	private int Id;
+	
+	@javax.persistence.Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long Id;
+	
 	private String name;
 	private UserRole role;
 	private String email;
@@ -40,10 +48,7 @@ public class User implements IsSerializable  {
 	public void setIsActive(Boolean isActive) {
 		IsActive = isActive;
 	}
-	public int getId() {
+	public long getId() {
 		return Id;
-	}
-	public void setId(int id) {
-		Id = id;
 	}
 }

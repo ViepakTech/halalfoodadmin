@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.google.appengine.api.datastore.Key;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.viepak.halalfood.client.service.UserManagement;
+import com.viepak.halalfood.db.UserDataUtility;
 import com.viepak.halalfood.shared.User;
 import com.viepak.halalfood.shared.UserRole;
 
@@ -24,7 +26,7 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 	@Override
 	public Boolean updateUser(User user) {
 		
-		for(int count = 0; count <= users.size(); count++){
+		/*for(int count = 0; count <= users.size(); count++){
 			User prevUser = users.get(count);
 			if(prevUser.getId() == user.getId()){
 				users.set(count, user);
@@ -32,12 +34,14 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 			}
 		}
 		
-		return false;
+		return false;*/
+		
+		return UserDataUtility.CreateUser(user);
 	}
 
 	@Override
-	public Boolean deleteUser(String id) {
-		for(int count = 0; count <= users.size(); count++){
+	public Boolean deleteUser(User user) {
+		/*for(int count = 0; count <= users.size(); count++){
 			User prevUser = users.get(count);
 			if(prevUser.getId() + "" == id){
 				users.remove(count);
@@ -45,13 +49,16 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 			}
 		}
 		
-		return false;
+		return false;*/
+		
+		return UserDataUtility.DeleteUser(user.getId());
 	}
 
 	@Override
 	public List<User> getAllUser() {
 		// TODO Auto-generated method stub
-		return getUsers();
+		//return getUsers();
+		return UserDataUtility.GetAllUsers();
 	}
 
 	@Override
@@ -72,7 +79,6 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 	
 	private User getUser1(){
 		User user = new User();
-		user.setId(100);
 		user.setName("Administrator");
 		user.setEmail("admin@gwt.com");
 		user.setIsActive(true);
@@ -84,7 +90,6 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 	
 	private User getUser2(){
 		User user = new User();
-		user.setId(200);
 		user.setName("Manager");
 		user.setEmail("manager@gwt.com");
 		user.setIsActive(true);

@@ -11,7 +11,7 @@ public interface UserManagementAsync {
 
 	void updateUser(User user, AsyncCallback<Boolean> callback);
 
-	void deleteUser(String id, AsyncCallback<Boolean> callback);
+	void deleteUser(User user, AsyncCallback<Boolean> callback);
 
 	void getAllUser(AsyncCallback<List<User>> callback);
 
