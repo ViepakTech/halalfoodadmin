@@ -85,8 +85,8 @@ public class UserManagementWidget extends Composite implements Presenter {
 	
 	private List<String> getRoleValues(){
 		List<String> roleValues = new ArrayList<String>();
-		roleValues.add("SuperAdmin");
-		roleValues.add("Admin");
+		roleValues.add(UserRole.Admin);
+		roleValues.add(UserRole.SuperAdmin);
 		return roleValues;
 	}
 	
@@ -115,7 +115,7 @@ public class UserManagementWidget extends Composite implements Presenter {
 		
 		@Override
 		public String getValue(User object) {
-			return object.getRole().toString();
+			return object.getRole();
 		}
 	};
 	private final Column<User, String> emailColumn = new Column<User, String>(emailCell) {
@@ -129,7 +129,6 @@ public class UserManagementWidget extends Composite implements Presenter {
 
 		@Override
 		public String getValue(User object) {
-			// TODO Auto-generated method stub
 			return object.getPhoneNumber();
 		}
 		
@@ -138,7 +137,6 @@ public class UserManagementWidget extends Composite implements Presenter {
 		
 		@Override
 		public Boolean getValue(User object) {
-			// TODO Auto-generated method stub
 			return object.getIsActive();
 		}
 	};

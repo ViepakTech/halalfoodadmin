@@ -11,8 +11,13 @@ public class UserDataUtility {
 	public static List<User> GetAllUsers(){
 		EntityManager em = EMF.get().createEntityManager();
 		try{
-			Query q = em.createQuery("select u from User u");
-			List<User> users = q.getResultList();
+			List<User> users = em.createQuery("select u from User u", User.class).getResultList();
+			
+			for(User user: users){
+				System.out.println(user.getId());
+			}
+			
+			
 			List<User> usersList = new ArrayList<User>();
 			
 			for(int i = 0 ; i < users.size(); i ++){
@@ -21,7 +26,7 @@ public class UserDataUtility {
 			return usersList;
 		}
 		catch(Exception ex){
-			System.out.println(ex.getMessage());
+			System.out.println(ex.toString());
 			return null;
 		}
 		finally{
@@ -29,14 +34,14 @@ public class UserDataUtility {
 		}
 	}
 	
-	public static boolean CreateUser(User user){
+	public static User CreateUser(User user){
 		EntityManager em = EMF.get().createEntityManager();
 		try{
 			em.persist(user);
-			return true;
+			return user;
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
-			return false;
+			return null;
 		}finally{
 			em.close();
 		}

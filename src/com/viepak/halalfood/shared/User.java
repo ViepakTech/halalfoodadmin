@@ -14,7 +14,7 @@ public class User implements IsSerializable  {
 	private long Id;
 	
 	private String name;
-	private UserRole role;
+	private String role;
 	private String email;
 	private String phoneNumber;
 	private Boolean IsActive;
@@ -23,12 +23,6 @@ public class User implements IsSerializable  {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public UserRole getRole() {
-		return role;
-	}
-	public void setRole(UserRole role) {
-		this.role = role;
 	}
 	public String getEmail() {
 		return email;
@@ -50,5 +44,14 @@ public class User implements IsSerializable  {
 	}
 	public long getId() {
 		return Id;
+	}
+	public void setId(long id) {
+		Id = id;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 }

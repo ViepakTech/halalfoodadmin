@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.viepak.halalfood.client.service;
 
 import java.util.List;

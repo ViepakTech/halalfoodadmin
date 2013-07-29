@@ -2,6 +2,7 @@ package com.viepak.halalfood.client.widget;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
@@ -47,8 +48,8 @@ public class CreateUserWidget extends Composite {
 		this.eventBus = eventBus;
 		this.userManagementService = userManagementService;
 		
-		lstRole.addItem(UserRole.SuperAdmin.toString());
-		lstRole.addItem(UserRole.Admin.toString());
+		lstRole.addItem(UserRole.SuperAdmin);
+		lstRole.addItem(UserRole.Admin);
 	}
 
 	@UiHandler("btnSave")
@@ -57,7 +58,7 @@ public class CreateUserWidget extends Composite {
 		user.setName(txtName.getText());
 		user.setEmail(txtEmail.getText());
 		user.setPhoneNumber(txtPhone.getText());
-		//user.setRole((UserRole)lstRole.getValue(lstRole.getSelectedIndex()));
+		user.setRole(lstRole.getValue(lstRole.getSelectedIndex()));
 		user.setIsActive(chkActive.getValue());
 		
 		userManagementService.createUser(user, new AsyncCallback<User>() {
@@ -69,11 +70,11 @@ public class CreateUserWidget extends Composite {
 			
 			@Override
 			public void onFailure(Throwable caught) {
-				// TODO Auto-generated method stub
-				
+				Window.alert("Create user failed");
 			}
 		});
 	}
+	
 	@UiHandler("btnCancel")
 	void onBtnCancelClick(ClickEvent event) {
 		eventBus.fireEvent(new CreateUserEvent(null));
