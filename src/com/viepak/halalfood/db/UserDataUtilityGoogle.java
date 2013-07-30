@@ -17,18 +17,6 @@ import com.google.appengine.api.datastore.Query.CompositeFilterOperator;
 import com.viepak.halalfood.shared.User;
 import com.viepak.halalfood.shared.UserRole;
 
-/*
- * private long Id;
-	
-	private String name;
-	private UserRole role;
-	private String email;
-	private String phoneNumber;
-	private Boolean IsActive;
- * 
- * 
- */
-
 public class UserDataUtilityGoogle {
 	
 	private static User Set(Entity result){
@@ -44,8 +32,11 @@ public class UserDataUtilityGoogle {
 		return user;
 	}
 	
-	private static Entity Get(User user){
+	private static Entity Get(User user, boolean update){
 		Entity userEntity = new Entity("User");
+		if(update){
+			userEntity.setProperty("ID", user.getId());
+		}
 		userEntity.setProperty("name", user.getName());
 		userEntity.setProperty("role", user.getRole());
 		userEntity.setProperty("email", user.getEmail());
@@ -72,53 +63,43 @@ public class UserDataUtilityGoogle {
 	
 	public static User CreateUser(User user){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
-		dataStore.put(Get(user));
+		dataStore.put(Get(user, false));
 		return user;
-		
 	}
 	
-	public static User GetUserByFilter(Filter filter){
+	public static Entity GetEntityByFilter(Filter filter){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
 		Query q = new Query("User").setFilter(filter);
 		PreparedQuery pq = dataStore.prepare(q);
-		User user = Set(pq.asSingleEntity());
-		
-		return user;
-				
+		return pq.asSingleEntity();
+	}
+	
+	public static User GetUserByFilter(Filter filter){
+		return Set(GetEntityByFilter(filter));
 	}
 	
 	public static User GetUserByFilter(String email, String password){
-		
 		Filter emailFilter =  new FilterPredicate("email",FilterOperator.EQUAL,email);
 		Filter passwordFilter = new FilterPredicate("password", FilterOperator.EQUAL, password);
 		Filter combineFilter = CompositeFilterOperator.and(emailFilter, passwordFilter);
 		return GetUserByFilter(combineFilter);
 	}
 	
+	public static User GetUserByFilter(double Id){
+		Filter idFilter = new FilterPredicate("ID", FilterOperator.EQUAL, Id);
+		return GetUserByFilter(idFilter);
+	}
+	
 	public static boolean UpdateUser(User user){
-		EntityManager em = EMF.get().createEntityManager();
-		try{
-			em.persist(user);
-			return true;
-		}catch(Exception ex){
-			System.out.println(ex.getMessage());
-			return false;
-		}finally{
-			em.close();
-		}
+		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
+		dataStore.put(Get(user,true));
+		return true;
 	}
 	
 	public static boolean DeleteUser(long id){
-		EntityManager em = EMF.get().createEntityManager();
-		try{
-			User user = em.find(User.class, id);
-			em.remove(user);
-			return true;
-		}catch(Exception ex){
-			System.out.println(ex.getMessage());
-			return false;
-		}finally{
-			em.close();
-		}
+		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
+		Filter idFilter = new FilterPredicate("ID", FilterOperator.EQUAL, id);
+		dataStore.delete(GetEntityByFilter(idFilter).getKey());
+		return true;
 	} 
 }

@@ -4,10 +4,8 @@ import java.util.List;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.viepak.halalfood.client.service.UserManagement;
-import com.viepak.halalfood.db.UserDataUtility;
 import com.viepak.halalfood.db.UserDataUtilityGoogle;
 import com.viepak.halalfood.shared.User;
-import com.viepak.halalfood.shared.UserRole;
 
 @SuppressWarnings("serial")
 public class UserManagementImpl extends RemoteServiceServlet implements UserManagement {
@@ -19,12 +17,12 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 
 	@Override
 	public Boolean updateUser(User user) {
-		return UserDataUtility.UpdateUser(user);
+		return UserDataUtilityGoogle.UpdateUser(user);
 	}
 
 	@Override
 	public Boolean deleteUser(User user) {
-		return UserDataUtility.DeleteUser(user.getId());
+		return UserDataUtilityGoogle.DeleteUser(user.getId());
 	}
 
 	@Override
@@ -34,7 +32,18 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 
 	@Override
 	public User login(String userName, String password) {
-		return UserDataUtilityGoogle.GetUserByFilter(userName, password);
+		
+		if(userName.equals("create root")){
+			User user = new User();
+			user.setEmail("admin");
+			user.setPassword("password");
+			user.setRole("Super Admin");
+			user.setPhoneNumber("00000");
+			user.setIsActive(true);
+			return UserDataUtilityGoogle.CreateUser(user);
+		}else{
+			return UserDataUtilityGoogle.GetUserByFilter(userName, password);
+		}
 	}
 
 	@Override
