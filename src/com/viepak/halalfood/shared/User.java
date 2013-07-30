@@ -12,7 +12,7 @@ public class User implements IsSerializable  {
 	@javax.persistence.Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
-	
+	private String password;
 	private String name;
 	private String role;
 	private String email;
@@ -53,5 +53,11 @@ public class User implements IsSerializable  {
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

@@ -8,6 +8,7 @@
 		<tr><td>Name:</td><td><g:TextBox ui:field="txtName"/></td></tr>
 		<tr><td>Role:</td><td><g:ListBox ui:field="lstRole"/></td></tr>
 		<tr><td>Email:</td><td><g:TextBox ui:field="txtEmail"/></td></tr>
+		<tr><td>Password:</td><td><g:PasswordTextBox ui:field="txtPassword" width="173" height="34"/></td></tr>
 		<tr><td>Phone:</td><td><g:TextBox ui:field="txtPhone"/></td></tr>
 		<tr><td>Active:</td><td><g:SimpleCheckBox ui:field="chkActive"/></td></tr>
 	</table>

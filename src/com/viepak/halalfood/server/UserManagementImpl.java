@@ -34,28 +34,12 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 
 	@Override
 	public User login(String userName, String password) {
-		
-		if(userName.equals("admin") && password.equals("password")){
-			return getUser1();
-		}else{
-			return null;
-		}
+		return UserDataUtilityGoogle.GetUserByFilter(userName, password);
 	}
 
 	@Override
 	public Boolean logout(User user) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-	
-	private User getUser1(){
-		User user = new User();
-		user.setName("Administrator");
-		user.setEmail("admin@gwt.com");
-		user.setIsActive(true);
-		user.setPhoneNumber("(123) 123-123");
-		user.setRole(UserRole.SuperAdmin);
-		
-		return user;
 	}
 }

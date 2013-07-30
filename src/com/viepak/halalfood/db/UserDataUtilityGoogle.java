@@ -10,6 +10,10 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.Filter;
+import com.google.appengine.api.datastore.Query.FilterOperator;
+import com.google.appengine.api.datastore.Query.FilterPredicate;
+import com.google.appengine.api.datastore.Query.CompositeFilterOperator;
 import com.viepak.halalfood.shared.User;
 import com.viepak.halalfood.shared.UserRole;
 
@@ -33,10 +37,23 @@ public class UserDataUtilityGoogle {
 		user.setName((String)result.getProperty("name"));
 		user.setRole((String)result.getProperty("role"));
 		user.setEmail((String)result.getProperty("email"));
+		user.setPassword((String)result.getProperty("password"));
 		user.setPhoneNumber((String)result.getProperty("phoneNumber"));
 		user.setIsActive((boolean)result.getProperty("IsActive"));
 		
 		return user;
+	}
+	
+	private static Entity Get(User user){
+		Entity userEntity = new Entity("User");
+		userEntity.setProperty("name", user.getName());
+		userEntity.setProperty("role", user.getRole());
+		userEntity.setProperty("email", user.getEmail());
+		userEntity.setProperty("password", user.getPassword());
+		userEntity.setProperty("phoneNumber", user.getPhoneNumber());
+		userEntity.setProperty("IsActive", user.getIsActive());
+		
+		return userEntity;
 	}
 	
 	public static List<User> GetAllUsers(){
@@ -55,16 +72,27 @@ public class UserDataUtilityGoogle {
 	
 	public static User CreateUser(User user){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
-		Entity userEntity = new Entity("User");
-		userEntity.setProperty("name", user.getName());
-		userEntity.setProperty("role", user.getRole());
-		userEntity.setProperty("email", user.getEmail());
-		userEntity.setProperty("phoneNumber", user.getPhoneNumber());
-		userEntity.setProperty("IsActive", user.getIsActive());
-		dataStore.put(userEntity);
-		
+		dataStore.put(Get(user));
 		return user;
 		
+	}
+	
+	public static User GetUserByFilter(Filter filter){
+		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
+		Query q = new Query("User").setFilter(filter);
+		PreparedQuery pq = dataStore.prepare(q);
+		User user = Set(pq.asSingleEntity());
+		
+		return user;
+				
+	}
+	
+	public static User GetUserByFilter(String email, String password){
+		
+		Filter emailFilter =  new FilterPredicate("email",FilterOperator.EQUAL,email);
+		Filter passwordFilter = new FilterPredicate("password", FilterOperator.EQUAL, password);
+		Filter combineFilter = CompositeFilterOperator.and(emailFilter, passwordFilter);
+		return GetUserByFilter(combineFilter);
 	}
 	
 	public static boolean UpdateUser(User user){

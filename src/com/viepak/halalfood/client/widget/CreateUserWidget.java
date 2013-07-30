@@ -19,6 +19,7 @@ import com.viepak.halalfood.client.event.CreateUserEventHandler;
 import com.viepak.halalfood.client.service.UserManagementAsync;
 import com.viepak.halalfood.shared.User;
 import com.viepak.halalfood.shared.UserRole;
+import com.google.gwt.user.client.ui.PasswordTextBox;
 
 public class CreateUserWidget extends Composite {
 
@@ -31,6 +32,7 @@ public class CreateUserWidget extends Composite {
 	@UiField SimpleCheckBox chkActive;
 	@UiField TextButton btnSave;
 	@UiField TextButton btnCancel;
+	@UiField PasswordTextBox txtPassword;
 	
 	private HandlerManager eventBus;
 	private UserManagementAsync userManagementService;
@@ -58,6 +60,7 @@ public class CreateUserWidget extends Composite {
 		user.setName(txtName.getText());
 		user.setEmail(txtEmail.getText());
 		user.setPhoneNumber(txtPhone.getText());
+		user.setPassword(txtPassword.getText());
 		user.setRole(lstRole.getValue(lstRole.getSelectedIndex()));
 		user.setIsActive(chkActive.getValue());
 		
