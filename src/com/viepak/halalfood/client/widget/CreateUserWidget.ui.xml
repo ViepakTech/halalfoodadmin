@@ -4,7 +4,9 @@
 	<g:HTMLPanel>
 	<b>Create New User</b><br/>
 
+
 	<table>
+		<tr><td>ID:</td><td><g:Label ui:field="txtId"/></td></tr>
 		<tr><td>Name:</td><td><g:TextBox ui:field="txtName"/></td></tr>
 		<tr><td>Role:</td><td><g:ListBox ui:field="lstRole"/></td></tr>
 		<tr><td>Email:</td><td><g:TextBox ui:field="txtEmail"/></td></tr>

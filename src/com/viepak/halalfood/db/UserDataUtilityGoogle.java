@@ -63,7 +63,11 @@ public class UserDataUtilityGoogle {
 	
 	public static User CreateUser(User user){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
-		dataStore.put(Get(user, false));
+		if(user.getId() > 0){
+			dataStore.put(Get(user, true));
+		}else{
+			dataStore.put(Get(user, false));
+		}
 		return user;
 	}
 	

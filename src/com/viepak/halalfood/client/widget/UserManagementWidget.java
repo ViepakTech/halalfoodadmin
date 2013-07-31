@@ -91,11 +91,11 @@ public class UserManagementWidget extends Composite implements Presenter {
 	}
 	
 	private final Cell<String> idCell  = new TextCell();
-	private final TextInputCell nameCell = new TextInputCell();
-	private final SelectionCell roleCell = new SelectionCell(getRoleValues());
-	private final TextInputCell emailCell = new TextInputCell();
-	private final TextInputCell phoneNumberCell = new TextInputCell();
-	private final CheckboxCell isActiveCell = new CheckboxCell();
+	private final Cell<String> nameCell = new TextCell();
+	private final Cell<String> roleCell = new TextCell();
+	private final Cell<String> emailCell = new TextCell();
+	private final Cell<String> phoneNumberCell = new TextCell();
+	private final Cell<String> isActiveCell = new TextCell();
 	
 	private final Column<User, String> idColumn = new Column<User, String>(idCell) {
 		
@@ -133,11 +133,11 @@ public class UserManagementWidget extends Composite implements Presenter {
 		}
 		
 	};
-	private final Column<User, Boolean> isActiveColumn = new Column<User, Boolean>(isActiveCell) {
+	private final Column<User, String> isActiveColumn = new Column<User, String>(isActiveCell) {
 		
 		@Override
-		public Boolean getValue(User object) {
-			return object.getIsActive();
+		public String getValue(User object) {
+			return object.getIsActive().toString();
 		}
 	};
 	
@@ -157,7 +157,7 @@ public class UserManagementWidget extends Composite implements Presenter {
 		
 		this.eventBus = eventBus;
 		this.userManagementService = userManagementService;
-		createUserWidget = new CreateUserWidget(eventBus, userManagementService);
+		createUserWidget = new CreateUserWidget(eventBus, userManagementService, null);
 		
 		iniDatagrid();
 		

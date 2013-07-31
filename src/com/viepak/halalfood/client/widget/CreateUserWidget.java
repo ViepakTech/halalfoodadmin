@@ -20,6 +20,7 @@ import com.viepak.halalfood.client.service.UserManagementAsync;
 import com.viepak.halalfood.shared.User;
 import com.viepak.halalfood.shared.UserRole;
 import com.google.gwt.user.client.ui.PasswordTextBox;
+import com.google.gwt.user.client.ui.Label;
 
 public class CreateUserWidget extends Composite {
 
@@ -33,9 +34,11 @@ public class CreateUserWidget extends Composite {
 	@UiField TextButton btnSave;
 	@UiField TextButton btnCancel;
 	@UiField PasswordTextBox txtPassword;
+	@UiField Label txtId;
 	
 	private HandlerManager eventBus;
 	private UserManagementAsync userManagementService;
+	private User user;
 
 	interface CreateUserWidgetUiBinder extends UiBinder<Widget, CreateUserWidget> {
 	}
@@ -44,19 +47,38 @@ public class CreateUserWidget extends Composite {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 	
-	public CreateUserWidget(HandlerManager eventBus, UserManagementAsync userManagementService){
+	public CreateUserWidget(HandlerManager eventBus, UserManagementAsync userManagementService, User user){
 		initWidget(uiBinder.createAndBindUi(this));
 		
 		this.eventBus = eventBus;
 		this.userManagementService = userManagementService;
+		this.user = user;
 		
 		lstRole.addItem(UserRole.SuperAdmin);
 		lstRole.addItem(UserRole.Admin);
+		
+		initUI();
+	}
+	
+	void initUI(){
+		if(user != null){
+			txtId.setText(user.getId() + "");
+			txtName.setText(user.getName());
+			txtEmail.setText(user.getEmail());
+			txtPhone.setText(user.getPhoneNumber());
+			txtPassword.setText(user.getPassword());
+			chkActive.setValue(user.getIsActive());
+			if(user.getRole().equals(UserRole.SuperAdmin)){
+				lstRole.setItemSelected(0, true);
+			}else{
+				lstRole.setItemSelected(1, true);
+			}
+		}
 	}
 
 	@UiHandler("btnSave")
 	void onBtnSaveClick(ClickEvent event) {
-		User user = new User();
+		if(user == null) user = new User();
 		user.setName(txtName.getText());
 		user.setEmail(txtEmail.getText());
 		user.setPhoneNumber(txtPhone.getText());

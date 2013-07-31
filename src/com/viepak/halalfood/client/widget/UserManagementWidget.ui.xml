@@ -4,6 +4,6 @@
 	<g:HTMLPanel>
 	<g:Button ui:field="btnAddNewUser">Add New User</g:Button>
 	<hr/>
-	<p1:CellTable ui:field="userCellTable"/>
+	<p1:CellTable ui:field="userCellTable" width="100%" height="157px"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 
