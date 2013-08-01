@@ -11,6 +11,8 @@ import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.cell.client.TextInputCell;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.DoubleClickEvent;
+import com.google.gwt.event.dom.client.DoubleClickHandler;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.event.shared.HandlerRegistration;
@@ -33,6 +35,8 @@ import com.google.gwt.view.client.AsyncDataProvider;
 import com.google.gwt.view.client.HasData;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.view.client.ProvidesKey;
+import com.google.gwt.view.client.SingleSelectionModel;
+import com.sun.java.swing.plaf.windows.resources.windows;
 import com.viepak.halalfood.client.event.CreateUserEvent;
 import com.viepak.halalfood.client.event.CreateUserEventHandler;
 import com.viepak.halalfood.client.service.UserManagementAsync;
@@ -83,13 +87,6 @@ public class UserManagementWidget extends Composite implements Presenter {
 		}
 	};
 	
-	private List<String> getRoleValues(){
-		List<String> roleValues = new ArrayList<String>();
-		roleValues.add(UserRole.Admin);
-		roleValues.add(UserRole.SuperAdmin);
-		return roleValues;
-	}
-	
 	private final Cell<String> idCell  = new TextCell();
 	private final Cell<String> nameCell = new TextCell();
 	private final Cell<String> roleCell = new TextCell();
@@ -104,7 +101,6 @@ public class UserManagementWidget extends Composite implements Presenter {
 			return object.getId() + "";
 		}
 	};
-	
 	private final Column<User, String> nameColumn = new Column<User, String>(nameCell) {
 		@Override
 		public String getValue(User object) {
@@ -157,8 +153,7 @@ public class UserManagementWidget extends Composite implements Presenter {
 		
 		this.eventBus = eventBus;
 		this.userManagementService = userManagementService;
-		createUserWidget = new CreateUserWidget(eventBus, userManagementService, null);
-		
+	
 		iniDatagrid();
 		
 		this.eventBus.addHandler(CreateUserEvent.TYPE, new CreateUserEventHandler() {
@@ -181,6 +176,23 @@ public class UserManagementWidget extends Composite implements Presenter {
 		userCellTable.addColumn(isActiveColumn, "Active");
 		
 		dataProvider.addDataDisplay(userCellTable);
+		
+		final SingleSelectionModel<User> selectionModel = new SingleSelectionModel<User>();
+		
+		userCellTable.setSelectionModel(selectionModel);
+		userCellTable.addDomHandler(new DoubleClickHandler() {
+			
+			@Override
+			public void onDoubleClick(DoubleClickEvent event) {
+				User selectedUser = selectionModel.getSelectedObject();
+				if(selectedUser!= null){
+					createUserWidget = new CreateUserWidget(eventBus, userManagementService, selectedUser);
+					newUserDialog.add(createUserWidget);
+					newUserDialog.center();
+					newUserDialog.show();
+				}
+			}
+		}, DoubleClickEvent.getType());
 	}
 
 	@Override
@@ -190,9 +202,15 @@ public class UserManagementWidget extends Composite implements Presenter {
 
 	@UiHandler("btnAddNewUser")
 	void onBtnAddNewUserClick(ClickEvent event) {
+		createUserWidget = new CreateUserWidget(eventBus, userManagementService, null);
 		newUserDialog.add(createUserWidget);
 		newUserDialog.center();
 		newUserDialog.show();
+	}
+	@UiHandler("btnEditRecord")
+	void onBtnEditRecordClick(ClickEvent event) {
+		String userId = userCellTable.getRowElement(1).getPropertyString("Name");
+		Window.alert(userId);
 	}
 }
 

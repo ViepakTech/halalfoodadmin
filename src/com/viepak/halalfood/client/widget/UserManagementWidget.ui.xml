@@ -3,6 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
 	<g:HTMLPanel>
 	<g:Button ui:field="btnAddNewUser">Add New User</g:Button>
+	<g:Button ui:field="btnEditRecord">Edit user</g:Button>
 	<hr/>
 	<p1:CellTable ui:field="userCellTable" width="100%" height="157px"/>
 	</g:HTMLPanel>
