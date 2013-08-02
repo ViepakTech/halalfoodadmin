@@ -12,12 +12,16 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 	
 	@Override
 	public User createUser(User user) {
-		return UserDataUtilityGoogle.CreateUser(user);
+		return UserDataUtilityGoogle.SyncUser(user);
 	}
 
 	@Override
 	public Boolean updateUser(User user) {
-		return UserDataUtilityGoogle.UpdateUser(user);
+		User returnUser = UserDataUtilityGoogle.SyncUser(user);
+		if(returnUser != null)
+			return true;
+		else
+			return false;
 	}
 
 	@Override
@@ -40,7 +44,7 @@ public class UserManagementImpl extends RemoteServiceServlet implements UserMana
 			user.setRole("Super Admin");
 			user.setPhoneNumber("00000");
 			user.setIsActive(true);
-			return UserDataUtilityGoogle.CreateUser(user);
+			return UserDataUtilityGoogle.SyncUser(user);
 		}else{
 			return UserDataUtilityGoogle.GetUserByFilter(userName, password);
 		}

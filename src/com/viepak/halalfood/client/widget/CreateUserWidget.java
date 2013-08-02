@@ -35,6 +35,7 @@ public class CreateUserWidget extends Composite {
 	@UiField TextButton btnCancel;
 	@UiField PasswordTextBox txtPassword;
 	@UiField Label txtId;
+	@UiField TextButton btnDelete;
 	
 	private HandlerManager eventBus;
 	private UserManagementAsync userManagementService;
@@ -73,12 +74,17 @@ public class CreateUserWidget extends Composite {
 			}else{
 				lstRole.setItemSelected(1, true);
 			}
+			btnDelete.setVisible(true);
+		}else{
+			btnDelete.setVisible(false);
 		}
 	}
 
 	@UiHandler("btnSave")
 	void onBtnSaveClick(ClickEvent event) {
-		if(user == null) user = new User();
+		if(user == null) {
+			user = new User();
+		}
 		user.setName(txtName.getText());
 		user.setEmail(txtEmail.getText());
 		user.setPhoneNumber(txtPhone.getText());
@@ -103,5 +109,20 @@ public class CreateUserWidget extends Composite {
 	@UiHandler("btnCancel")
 	void onBtnCancelClick(ClickEvent event) {
 		eventBus.fireEvent(new CreateUserEvent(null));
+	}
+	@UiHandler("btnDelete")
+	void onBtnDeleteClick(ClickEvent event) {
+		userManagementService.deleteUser(user, new AsyncCallback<Boolean>() {
+
+			@Override
+			public void onFailure(Throwable caught) {
+				Window.alert("Failed to delete user");
+			}
+
+			@Override
+			public void onSuccess(Boolean result) {
+				eventBus.fireEvent(new CreateUserEvent(null));
+			}
+		});
 	}
 }

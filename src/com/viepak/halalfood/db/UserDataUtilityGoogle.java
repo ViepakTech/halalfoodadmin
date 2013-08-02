@@ -8,6 +8,8 @@ import javax.persistence.EntityManager;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.EntityNotFoundException;
+import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.Filter;
@@ -32,11 +34,7 @@ public class UserDataUtilityGoogle {
 		return user;
 	}
 	
-	private static Entity Get(User user, boolean update){
-		Entity userEntity = new Entity("User");
-		if(update){
-			userEntity.setProperty("ID", user.getId());
-		}
+	private static Entity Get(User user, Entity userEntity){
 		userEntity.setProperty("name", user.getName());
 		userEntity.setProperty("role", user.getRole());
 		userEntity.setProperty("email", user.getEmail());
@@ -61,12 +59,13 @@ public class UserDataUtilityGoogle {
 		return users;
 	}
 	
-	public static User CreateUser(User user){
+	public static User SyncUser(User user){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
+		
 		if(user.getId() > 0){
-			dataStore.put(Get(user, true));
+			dataStore.put(Get(user,new Entity("User", user.getId())));
 		}else{
-			dataStore.put(Get(user, false));
+			dataStore.put(Get(user,new Entity("User")));
 		}
 		return user;
 	}
@@ -76,6 +75,11 @@ public class UserDataUtilityGoogle {
 		Query q = new Query("User").setFilter(filter);
 		PreparedQuery pq = dataStore.prepare(q);
 		return pq.asSingleEntity();
+	}
+	
+	public static Entity GetEntityById(long id){
+		Filter idFilter = new FilterPredicate("ID", FilterOperator.EQUAL, id);
+		return GetEntityByFilter(idFilter);
 	}
 	
 	public static User GetUserByFilter(Filter filter){
@@ -94,16 +98,9 @@ public class UserDataUtilityGoogle {
 		return GetUserByFilter(idFilter);
 	}
 	
-	public static boolean UpdateUser(User user){
-		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
-		dataStore.put(Get(user,true));
-		return true;
-	}
-	
 	public static boolean DeleteUser(long id){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
-		Filter idFilter = new FilterPredicate("ID", FilterOperator.EQUAL, id);
-		dataStore.delete(GetEntityByFilter(idFilter).getKey());
+		dataStore.delete(new Entity("User", id).getKey());
 		return true;
 	} 
 }

@@ -207,11 +207,6 @@ public class UserManagementWidget extends Composite implements Presenter {
 		newUserDialog.center();
 		newUserDialog.show();
 	}
-	@UiHandler("btnEditRecord")
-	void onBtnEditRecordClick(ClickEvent event) {
-		String userId = userCellTable.getRowElement(1).getPropertyString("Name");
-		Window.alert(userId);
-	}
 }
 
 

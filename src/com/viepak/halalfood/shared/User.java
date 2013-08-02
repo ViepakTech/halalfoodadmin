@@ -9,9 +9,8 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 @Entity
 public class User implements IsSerializable  {
 	
-	@javax.persistence.Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
+	
 	private String password;
 	private String name;
 	private String role;
