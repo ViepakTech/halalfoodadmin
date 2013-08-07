@@ -2,7 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<g:HTMLPanel>
-		<g:TabPanel width="50%" ui:field="tabPanelControl"/>
+		<g:TabPanel ui:field="tabPanelControl" width="419px" height="216px"/>
 	
 	</g:HTMLPanel>
 </ui:UiBinder> 
