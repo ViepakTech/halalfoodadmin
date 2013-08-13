@@ -19,6 +19,7 @@ import com.viepak.halalfood.client.event.LoginUserEvent;
 import com.viepak.halalfood.client.event.LoginUserEventHandler;
 import com.viepak.halalfood.client.event.LogoutUserEvent;
 import com.viepak.halalfood.client.event.LogoutUserEventHandler;
+import com.viepak.halalfood.client.service.IngredientManagementAsync;
 import com.viepak.halalfood.client.service.UserManagementAsync;
 import com.viepak.halalfood.shared.InformationHub;
 
@@ -26,10 +27,11 @@ public class TabWidget extends Composite implements Presenter {
 
 	private HandlerManager eventBus;
 	private UserManagementAsync userManagementService;
+	private IngredientManagementAsync ingredientManagementService;
 	private InformationHub infoHub;
 	private LoginWidget loginWidget;
 	private UserManagementWidget manageUserWidget;
-	private ProductManagementWidget manageProductWidget;
+	private IngredientManagementWidget manageProductWidget;
 	
 	private static TabWidgetUiBinder uiBinder = GWT
 			.create(TabWidgetUiBinder.class);
@@ -42,11 +44,12 @@ public class TabWidget extends Composite implements Presenter {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 	
-	public TabWidget(HandlerManager eventBus, UserManagementAsync userManagementService, InformationHub infoHub){
+	public TabWidget(HandlerManager eventBus, UserManagementAsync userManagementService, IngredientManagementAsync ingredientManagementService, InformationHub infoHub){
 		initWidget(uiBinder.createAndBindUi(this));
 		
 		this.eventBus = eventBus;
 		this.userManagementService = userManagementService;
+		this.ingredientManagementService = ingredientManagementService;
 		this.infoHub = infoHub;
 		
 		loginWidget = new LoginWidget(eventBus, userManagementService);
@@ -85,8 +88,9 @@ public class TabWidget extends Composite implements Presenter {
 			manageUserWidget = new UserManagementWidget(eventBus, userManagementService);
 		}
 		if(manageProductWidget == null){
-			manageProductWidget = new ProductManagementWidget();
+			manageProductWidget = new IngredientManagementWidget();
 		}
+		
 		tabPanelControl.add(manageUserWidget, "User Management");
 		tabPanelControl.add(manageProductWidget, "Product Management");
 	}

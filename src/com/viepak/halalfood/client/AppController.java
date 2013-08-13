@@ -8,6 +8,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.viepak.halalfood.client.event.LoginUserEvent;
 import com.viepak.halalfood.client.event.LoginUserEventHandler;
+import com.viepak.halalfood.client.service.IngredientManagementAsync;
 import com.viepak.halalfood.client.service.UserManagementAsync;
 import com.viepak.halalfood.client.widget.LoginWidget;
 import com.viepak.halalfood.client.widget.UserManagementWidget;
@@ -19,13 +20,15 @@ import com.viepak.halalfood.shared.InformationHub;
 public class AppController implements Presenter, ValueChangeHandler<String> {
 
 	private final UserManagementAsync userManagementService;
+	private final IngredientManagementAsync ingredientManagementService;
 	private final HandlerManager eventBus;
 	private HasWidgets container;
 	private final InformationHub infoHub;
 	
-	public AppController(UserManagementAsync userManagementService, HandlerManager eventBus, InformationHub infoHub){
+	public AppController(UserManagementAsync userManagementService, IngredientManagementAsync ingredientManagementService, HandlerManager eventBus, InformationHub infoHub){
 		this.eventBus = eventBus;
 		this.userManagementService = userManagementService;
+		this.ingredientManagementService = ingredientManagementService;
 		this.infoHub = infoHub;
 		bind();
 	}
@@ -55,7 +58,7 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 		
 		if(token != null){
 			if(token == "Main"){
-				presenter = new TabWidget(eventBus, userManagementService, infoHub);
+				presenter = new TabWidget(eventBus, userManagementService, ingredientManagementService, infoHub);
 			}
 		}
 			
