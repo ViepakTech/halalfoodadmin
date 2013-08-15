@@ -2589,3 +2589,813 @@ Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_Ingredie
       Compiling...
          Compilation completed in 0.00 seconds
       Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2719 units from cache.
+Compiling...
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 9.97 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2719 units from cache.
+Compiling...
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 9.99 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2719 units from cache.
+Compiling...
+   40% complete (ETR: 6 seconds)
+   40% complete (ETR: 6 seconds)
+   40% complete (ETR: 6 seconds)
+   40% complete (ETR: 6 seconds)
+   40% complete (ETR: 6 seconds)
+   50% complete (ETR: 5 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 10.23 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2746 units from cache.
+Compiling...
+   Compilation completed in 5.44 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget.IngredientManagementWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566705921.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566705921.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566705921_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget.IngredientManagementWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566709776.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566709776.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566709776_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget.IngredientManagementWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566723007.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566723007.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.IngredientManagementWidget_IngredientManagementWidgetUiBinderImpl_designTime1376566723007_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2745 cached/archived units.  Used 2745 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.03 seconds
+Invalid Unit: com.viepak.halalfood.client.widget.TabWidget
+Invalid units found: 1
+Compiling...
+   Compilation completed in 0.01 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376566948340.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376566948340.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376566948340_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method buttonCellBaseBackground
+         Adding image 'com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Resources.buttonCellBaseBackground'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Template
+         Generating method body for iconContentLayout()
+         Generating method body for iconWrapper()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.resources.client.CommonResources.Bundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376566948988.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376566948988.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376566948988_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567056860.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567056860.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567056860_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567056968.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567056968.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567056968_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567069697.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567069697.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567069697_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567093310.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567093310.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567093310_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567123486.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567123486.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567123486_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567134057.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567134057.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567134057_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567154732.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567154732.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567154732_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567154818.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567154818.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567154818_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567181355.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567181355.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567181355_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567192176.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567192176.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567192176_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567232033.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567232033.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567232033_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567232117.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567232117.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567232117_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567254679.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567254679.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376567254679_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2747 units from cache.
+Compiling...
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 11.82 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/nmalik/Development/halalfoodadmin/src/com/viepak/halalfood/client/widget/CreateIngredientWidget.java'
+      [ERROR] Line 58: The method addItem(String) is undefined for the type TextBox
+      [ERROR] Line 59: The method addItem(String) is undefined for the type TextBox
+      [ERROR] Line 69: txtPhone cannot be resolved
+      [ERROR] Line 70: The method setText(String) is undefined for the type ListBox
+      [ERROR] Line 73: The method setItemSelected(int, boolean) is undefined for the type TextBox
+      [ERROR] Line 75: The method setItemSelected(int, boolean) is undefined for the type TextBox
+      [ERROR] Line 90: txtPhone cannot be resolved
+      [ERROR] Line 91: The method getText() is undefined for the type ListBox
+      [ERROR] Line 92: The method getSelectedIndex() is undefined for the type TextBox
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/nmalik/Development/halalfoodadmin/src/com/viepak/halalfood/client/widget/CreateIngredientWidget.java'
+   [ERROR] Line 58: The method addItem(String) is undefined for the type TextBox
+   [ERROR] Line 59: The method addItem(String) is undefined for the type TextBox
+   [ERROR] Line 69: txtPhone cannot be resolved
+   [ERROR] Line 70: The method setText(String) is undefined for the type ListBox
+   [ERROR] Line 73: The method setItemSelected(int, boolean) is undefined for the type TextBox
+   [ERROR] Line 75: The method setItemSelected(int, boolean) is undefined for the type TextBox
+   [ERROR] Line 90: txtPhone cannot be resolved
+   [ERROR] Line 91: The method getText() is undefined for the type ListBox
+   [ERROR] Line 92: The method getSelectedIndex() is undefined for the type TextBox
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Checking rule <generate-with class='com.google.gwt.user.rebind.rpc.ServiceInterfaceProxyGenerator'/>
+      [ERROR] Errors in 'file:/Users/nmalik/Development/halalfoodadmin/src/com/viepak/halalfood/client/widget/CreateIngredientWidget.java'
+         [ERROR] Line 58: The method addItem(String) is undefined for the type TextBox
+         [ERROR] Line 59: The method addItem(String) is undefined for the type TextBox
+         [ERROR] Line 69: txtPhone cannot be resolved
+         [ERROR] Line 70: The method setText(String) is undefined for the type ListBox
+         [ERROR] Line 73: The method setItemSelected(int, boolean) is undefined for the type TextBox
+         [ERROR] Line 75: The method setItemSelected(int, boolean) is undefined for the type TextBox
+         [ERROR] Line 90: txtPhone cannot be resolved
+         [ERROR] Line 91: The method getText() is undefined for the type ListBox
+         [ERROR] Line 92: The method getSelectedIndex() is undefined for the type TextBox
+      [ERROR] Unable to find type 'com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder'
+         [ERROR] Hint: Previous compiler errors may have made this type unavailable
+         [ERROR] Hint: Check the inheritance chain from your module; it may not be inheriting a required module or a module may not be adding its source path entries properly
+[ERROR] Deferred binding failed for 'com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder'; expect subsequent failures
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2747 units from cache.
+Compiling...
+   30% complete (ETR: 11 seconds)
+   30% complete (ETR: 11 seconds)
+   30% complete (ETR: 11 seconds)
+   30% complete (ETR: 11 seconds)
+   40% complete (ETR: 9 seconds)
+   50% complete (ETR: 8 seconds)
+   60% complete (ETR: 5 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 15.57 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/nmalik/Development/halalfoodadmin/src/com/viepak/halalfood/client/widget/CreateIngredientWidget.java'
+      [ERROR] Line 58: The method addItem(String) is undefined for the type TextBox
+      [ERROR] Line 59: The method addItem(String) is undefined for the type TextBox
+      [ERROR] Line 69: txtPhone cannot be resolved
+      [ERROR] Line 70: The method setText(String) is undefined for the type ListBox
+      [ERROR] Line 73: The method setItemSelected(int, boolean) is undefined for the type TextBox
+      [ERROR] Line 75: The method setItemSelected(int, boolean) is undefined for the type TextBox
+      [ERROR] Line 90: txtPhone cannot be resolved
+      [ERROR] Line 91: The method getText() is undefined for the type ListBox
+      [ERROR] Line 92: The method getSelectedIndex() is undefined for the type TextBox
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/nmalik/Development/halalfoodadmin/src/com/viepak/halalfood/client/widget/CreateIngredientWidget.java'
+   [ERROR] Line 58: The method addItem(String) is undefined for the type TextBox
+   [ERROR] Line 59: The method addItem(String) is undefined for the type TextBox
+   [ERROR] Line 69: txtPhone cannot be resolved
+   [ERROR] Line 70: The method setText(String) is undefined for the type ListBox
+   [ERROR] Line 73: The method setItemSelected(int, boolean) is undefined for the type TextBox
+   [ERROR] Line 75: The method setItemSelected(int, boolean) is undefined for the type TextBox
+   [ERROR] Line 90: txtPhone cannot be resolved
+   [ERROR] Line 91: The method getText() is undefined for the type ListBox
+   [ERROR] Line 92: The method getSelectedIndex() is undefined for the type TextBox
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Checking rule <generate-with class='com.google.gwt.user.rebind.rpc.ServiceInterfaceProxyGenerator'/>
+      [ERROR] Errors in 'file:/Users/nmalik/Development/halalfoodadmin/src/com/viepak/halalfood/client/widget/CreateIngredientWidget.java'
+         [ERROR] Line 58: The method addItem(String) is undefined for the type TextBox
+         [ERROR] Line 59: The method addItem(String) is undefined for the type TextBox
+         [ERROR] Line 69: txtPhone cannot be resolved
+         [ERROR] Line 70: The method setText(String) is undefined for the type ListBox
+         [ERROR] Line 73: The method setItemSelected(int, boolean) is undefined for the type TextBox
+         [ERROR] Line 75: The method setItemSelected(int, boolean) is undefined for the type TextBox
+         [ERROR] Line 90: txtPhone cannot be resolved
+         [ERROR] Line 91: The method getText() is undefined for the type ListBox
+         [ERROR] Line 92: The method getSelectedIndex() is undefined for the type TextBox
+      [ERROR] Unable to find type 'com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder'
+         [ERROR] Hint: Previous compiler errors may have made this type unavailable
+         [ERROR] Hint: Check the inheritance chain from your module; it may not be inheriting a required module or a module may not be adding its source path entries properly
+[ERROR] Deferred binding failed for 'com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder'; expect subsequent failures
+Public resources found in...
+Translatable source found in...
+Found 2746 cached/archived units.  Used 2746 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376568509364.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376568509364.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376568509364_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method buttonCellBaseBackground
+         Adding image 'com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Resources.buttonCellBaseBackground'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.06 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.cell.client.ButtonCellBase.DefaultAppearance.Template
+         Generating method body for iconContentLayout()
+         Generating method body for iconWrapper()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.resources.client.CommonResources.Bundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget.CreateIngredientWidgetUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376568509992.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376568509992.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.viepak.halalfood.client.widget.CreateIngredientWidget_CreateIngredientWidgetUiBinderImpl_designTime1376568509992_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units

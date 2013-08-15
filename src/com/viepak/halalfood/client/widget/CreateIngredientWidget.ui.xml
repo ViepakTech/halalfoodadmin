@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:w="urn:import:com.google.gwt.widget.client">
+	<g:HTMLPanel>
+	<b>New/Update Ingredient</b><br/>
+
+
+	<table>
+		<tr><td>ID:</td><td><g:Label ui:field="txtId"/></td></tr>
+		<tr><td>Name:</td><td><g:TextBox ui:field="txtName"/></td></tr>
+		<tr><td>eNumber:</td><td><g:TextBox ui:field="txtENumber"/></td></tr>
+		<tr><td>Alternative Names:</td><td><g:TextArea ui:field="txtAlternativeNames"/></td></tr>
+		<tr><td>Status:</td><td><g:ListBox ui:field="lstStatus" width="173" height="34"/></td></tr>
+		<tr><td>Evaluated Date:</td><td><g:TextBox ui:field="txtPhone"/></td></tr>
+		<tr><td>Active:</td><td><g:SimpleCheckBox ui:field="chkActive"/></td></tr>
+	</table>
+	<w:TextButton ui:field="btnSave" text="Save" value="Save"></w:TextButton>
+	<w:TextButton ui:field="btnDelete" text="Delete" value="Delete"></w:TextButton>
+	<w:TextButton text="Cancel" value="Cancel" ui:field="btnCancel"></w:TextButton>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

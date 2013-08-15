@@ -3,16 +3,18 @@ package com.viepak.halalfood.shared;
 import java.util.Date;
 import java.util.List;
 
+import com.google.gwt.user.client.rpc.IsSerializable;
+
 /*
  * Ingredient Name	E-Number	Alternative Names	Status	Date Evaluated	Evaluated By	Remarks
  */
 
-public class Ingredient {
+public class Ingredient implements IsSerializable{
 	private long Id;
 	
 	private String name;
 	private String eNumber;
-	private List<String> alternativeNames;
+	private String alternativeNames;
 	private String status;
 	private Date evaluatedDate;
 	private long evaluatedBy;
@@ -35,10 +37,10 @@ public class Ingredient {
 	public void seteNumber(String eNumber) {
 		this.eNumber = eNumber;
 	}
-	public List<String> getAlternativeNames() {
+	public String getAlternativeNames() {
 		return alternativeNames;
 	}
-	public void setAlternativeNames(List<String> alternativeNames) {
+	public void setAlternativeNames(String alternativeNames) {
 		this.alternativeNames = alternativeNames;
 	}
 	public String getStatus() {
