@@ -11,8 +11,8 @@
 		<tr><td>eNumber:</td><td><g:TextBox ui:field="txtENumber"/></td></tr>
 		<tr><td>Alternative Names:</td><td><g:TextArea ui:field="txtAlternativeNames"/></td></tr>
 		<tr><td>Status:</td><td><g:ListBox ui:field="lstStatus" width="173" height="34"/></td></tr>
-		<tr><td>Evaluated Date:</td><td><g:TextBox ui:field="txtPhone"/></td></tr>
-		<tr><td>Active:</td><td><g:SimpleCheckBox ui:field="chkActive"/></td></tr>
+		<tr><td>Evaluated Date:</td><td><g:TextBox ui:field="txtEvalutedDate"/></td></tr>
+		<tr><td>Evaludated By:</td><td><g:TextBox ui:field="txtEvaluatedBy" /></td></tr>
 	</table>
 	<w:TextButton ui:field="btnSave" text="Save" value="Save"></w:TextButton>
 	<w:TextButton ui:field="btnDelete" text="Delete" value="Delete"></w:TextButton>
