@@ -6,7 +6,17 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
-    <servlet>
+  <servlet>
+      <servlet-name>ingredientmanagementimpl</servlet-name>
+      <servlet-class>com.viepak.halalfood.server.IngredientManagementImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>ingredientmanagementimpl</servlet-name>
+      <url-pattern>/halalfoodadmin/ingredientmanagementservice</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
     <servlet-name>usermanagementimpl</servlet-name>
     <servlet-class>com.viepak.halalfood.server.UserManagementImpl</servlet-class>
   </servlet>

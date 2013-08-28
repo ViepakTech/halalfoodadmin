@@ -38,7 +38,7 @@ public class IngredientDataUtilityGoogle {
 		return ingredient;
 	}
 	
-	public static Ingredient SyncUser(Ingredient ingredient){
+	public static Ingredient syncIngredient(Ingredient ingredient){
 		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
 		
 		if(ingredient.getId() > 0){

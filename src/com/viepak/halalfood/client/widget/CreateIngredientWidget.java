@@ -16,6 +16,8 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.shared.HandlerManager;
 import com.viepak.halalfood.client.event.CreateUserEvent;
 import com.viepak.halalfood.client.event.CreateUserEventHandler;
+import com.viepak.halalfood.client.event.EditIngredientEvent;
+import com.viepak.halalfood.client.service.IngredientManagementAsync;
 import com.viepak.halalfood.client.service.UserManagementAsync;
 import com.viepak.halalfood.shared.Ingredient;
 import com.viepak.halalfood.shared.IngredientStatus;
@@ -39,7 +41,7 @@ public class CreateIngredientWidget extends Composite {
 	@UiField TextBox txtEvaluatedBy;
 	
 	private HandlerManager eventBus;
-	private UserManagementAsync userManagementService;
+	private IngredientManagementAsync ingredientManagementService;
 	private Ingredient ingredient;
 
 	interface CreateIngredientWidgetUiBinder extends UiBinder<Widget, CreateIngredientWidget> {
@@ -49,11 +51,11 @@ public class CreateIngredientWidget extends Composite {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 	
-	public CreateIngredientWidget(HandlerManager eventBus, UserManagementAsync userManagementService, Ingredient ingredient){
+	public CreateIngredientWidget(HandlerManager eventBus, IngredientManagementAsync ingredientManagementService, Ingredient ingredient){
 		initWidget(uiBinder.createAndBindUi(this));
 		
 		this.eventBus = eventBus;
-		this.userManagementService = userManagementService;
+		this.ingredientManagementService = ingredientManagementService;
 		this.ingredient = ingredient;
 		
 		lstStatus.addItem(IngredientStatus.Halal);
@@ -97,18 +99,18 @@ public class CreateIngredientWidget extends Composite {
 		ingredient.seteNumber(txtENumber.getText());
 		ingredient.setAlternativeNames(txtAlternativeNames.getText());
 		
-		/*userManagementService.createUser(user, new AsyncCallback<User>() {
-			
-			@Override
-			public void onSuccess(User result) {
-				eventBus.fireEvent(new CreateUserEvent(result));
-			}
-			
+		ingredientManagementService.create(ingredient, new AsyncCallback<Ingredient>() {
+
 			@Override
 			public void onFailure(Throwable caught) {
-				Window.alert("Create user failed");
+				Window.alert("Unable to create ingredient");
 			}
-		});*/
+
+			@Override
+			public void onSuccess(Ingredient result) {
+				eventBus.fireEvent(new EditIngredientEvent(result));
+			}
+		});
 	}
 	
 	@UiHandler("btnCancel")
@@ -117,17 +119,18 @@ public class CreateIngredientWidget extends Composite {
 	}
 	@UiHandler("btnDelete")
 	void onBtnDeleteClick(ClickEvent event) {
-		/*userManagementService.deleteUser(user, new AsyncCallback<Boolean>() {
+		
+		ingredientManagementService.delete(ingredient, new AsyncCallback<Boolean>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
-				Window.alert("Failed to delete user");
+				Window.alert("Unable to delete Ingredient");
 			}
 
 			@Override
 			public void onSuccess(Boolean result) {
-				eventBus.fireEvent(new CreateUserEvent(null));
+				eventBus.fireEvent(new EditIngredientEvent(null));
 			}
-		});*/
+		});
 	}
 }

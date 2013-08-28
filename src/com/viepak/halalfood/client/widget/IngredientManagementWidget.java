@@ -1,5 +1,6 @@
 package com.viepak.halalfood.client.widget;
 
+import java.awt.Dialog;
 import java.util.List;
 
 import com.google.gwt.cell.client.Cell;
@@ -16,12 +17,15 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.AsyncDataProvider;
 import com.google.gwt.view.client.HasData;
 import com.google.gwt.view.client.ProvidesKey;
 import com.google.gwt.view.client.SingleSelectionModel;
+import com.viepak.halalfood.client.event.EditIngredientEvent;
+import com.viepak.halalfood.client.event.EditIngredientEventHandler;
 import com.viepak.halalfood.client.service.IngredientManagementAsync;
 import com.viepak.halalfood.client.service.UserManagementAsync;
 import com.viepak.halalfood.shared.Ingredient;
@@ -36,6 +40,8 @@ public class IngredientManagementWidget extends Composite {
 	private HandlerManager eventBus;
 	private IngredientManagementAsync ingredientManagementService;
 	private AsyncDataProvider<Ingredient> dataProvider = getIngredientData();
+	private CreateIngredientWidget createIngredientWidget = null;
+	private DialogBox editIngredientDialog = new DialogBox();
 	
 	private AsyncDataProvider<Ingredient> getIngredientData(){
 		return new AsyncDataProvider<Ingredient>() {
@@ -143,6 +149,18 @@ public class IngredientManagementWidget extends Composite {
 		initWidget(uiBinder.createAndBindUi(this));
 		this.eventBus = eventBus;
 		this.ingredientManagementService = ingredientManagementService;
+		
+		initDataTable();
+		
+		this.eventBus.addHandler(EditIngredientEvent.TYPE, new EditIngredientEventHandler() {
+			
+			@Override
+			public void onEditUser(EditIngredientEvent event) {
+				editIngredientDialog.hide();
+				editIngredientDialog.remove(createIngredientWidget);
+				ingredientCellTable.setVisibleRangeAndClearData(ingredientCellTable.getVisibleRange(), true);
+			}
+		});
 	}
 	
 	private void initDataTable(){
@@ -164,6 +182,13 @@ public class IngredientManagementWidget extends Composite {
 			public void onDoubleClick(DoubleClickEvent event) {
 				Ingredient selectedIngredient = selectionModel.getSelectedObject();
 				
+				if(selectedIngredient != null){
+					createIngredientWidget = new CreateIngredientWidget(eventBus, ingredientManagementService, selectedIngredient);
+					editIngredientDialog.add(createIngredientWidget);
+					editIngredientDialog.center();
+					editIngredientDialog.show();
+				}
+				
 			}
 		}, DoubleClickEvent.getType());
 		
@@ -171,6 +196,9 @@ public class IngredientManagementWidget extends Composite {
 
 	@UiHandler("btnAddNewIngredient")
 	void onBtnAddNewIngredientClick(ClickEvent event) {
-		
+		createIngredientWidget = new CreateIngredientWidget(eventBus, ingredientManagementService, null);
+		editIngredientDialog.add(createIngredientWidget);
+		editIngredientDialog.center();
+		editIngredientDialog.show();
 	}
 }

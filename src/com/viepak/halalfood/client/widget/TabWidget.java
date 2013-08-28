@@ -88,11 +88,11 @@ public class TabWidget extends Composite implements Presenter {
 			manageUserWidget = new UserManagementWidget(eventBus, userManagementService);
 		}
 		if(manageProductWidget == null){
-			manageProductWidget = new IngredientManagementWidget();
+			manageProductWidget = new IngredientManagementWidget(eventBus, ingredientManagementService);
 		}
 		
 		tabPanelControl.add(manageUserWidget, "User Management");
-		tabPanelControl.add(manageProductWidget, "Product Management");
+		tabPanelControl.add(manageProductWidget, "Ingredient Management");
 	}
 	
 	private void doDisableManagement(){
