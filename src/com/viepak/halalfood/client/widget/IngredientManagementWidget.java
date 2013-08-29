@@ -125,7 +125,11 @@ public class IngredientManagementWidget extends Composite {
 		
 		@Override
 		public String getValue(Ingredient object) {
-			return object.getEvaluatedDate().toString();
+			if(object.getEvaluatedDate() != null){
+				return object.getEvaluatedDate().toString();
+			}else{
+				return "";
+			}
 		}
 	};
 	
@@ -133,7 +137,11 @@ public class IngredientManagementWidget extends Composite {
 		
 		@Override
 		public String getValue(Ingredient object) {
-			return object.getEvaluatedBy() + "";
+			if(object.getEvaluatedBy() != 0){
+				return object.getEvaluatedBy() + "";
+			}else{
+				return "-";
+			}
 		}
 	};
 

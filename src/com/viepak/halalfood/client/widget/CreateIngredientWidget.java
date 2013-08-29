@@ -1,5 +1,9 @@
 package com.viepak.halalfood.client.widget;
 
+import java.io.Console;
+import java.text.ParseException;
+import java.util.Date;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.Window;
@@ -24,6 +28,7 @@ import com.viepak.halalfood.shared.IngredientStatus;
 import com.google.gwt.user.client.ui.PasswordTextBox;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextArea;
+import com.ibm.icu.text.SimpleDateFormat;
 
 public class CreateIngredientWidget extends Composite {
 
@@ -73,15 +78,16 @@ public class CreateIngredientWidget extends Composite {
 			txtAlternativeNames.setText(ingredient.getAlternativeNames());
 			txtENumber.setText(ingredient.geteNumber());
 			
-			
-			if(ingredient.getStatus().equals(IngredientStatus.Halal)){
-				lstStatus.setItemSelected(0, true);
-			}else if(ingredient.getStatus().equals(IngredientStatus.Haraam)){
-				lstStatus.setItemSelected(1, true);
-			}else if(ingredient.getStatus().equals(IngredientStatus.Mushbooh)){
-				lstStatus.setItemSelected(2, true);
-			}else if(ingredient.getStatus().equals(IngredientStatus.Pending)){
-				lstStatus.setItemSelected(3, true);
+			if(ingredient.getStatus() != null){
+				if(ingredient.getStatus().equals(IngredientStatus.Halal)){
+					lstStatus.setItemSelected(0, true);
+				}else if(ingredient.getStatus().equals(IngredientStatus.Haraam)){
+					lstStatus.setItemSelected(1, true);
+				}else if(ingredient.getStatus().equals(IngredientStatus.Mushbooh)){
+					lstStatus.setItemSelected(2, true);
+				}else if(ingredient.getStatus().equals(IngredientStatus.Pending)){
+					lstStatus.setItemSelected(3, true);
+				}
 			}
 			
 			btnDelete.setVisible(true);
@@ -98,6 +104,12 @@ public class CreateIngredientWidget extends Composite {
 		ingredient.setName(txtName.getText());
 		ingredient.seteNumber(txtENumber.getText());
 		ingredient.setAlternativeNames(txtAlternativeNames.getText());
+		ingredient.setEvaluatedBy(Long.parseLong(lstStatus.getValue(lstStatus.getSelectedIndex())));
+		try {
+			ingredient.setEvaluatedDate(new SimpleDateFormat("mm/dd/yyyy").parse(txtEvalutedDate.getText()));
+		} catch (ParseException e) {
+			System.out.println("date converstion failed");
+		}
 		
 		ingredientManagementService.create(ingredient, new AsyncCallback<Ingredient>() {
 
@@ -115,7 +127,7 @@ public class CreateIngredientWidget extends Composite {
 	
 	@UiHandler("btnCancel")
 	void onBtnCancelClick(ClickEvent event) {
-		eventBus.fireEvent(new CreateUserEvent(null));
+		eventBus.fireEvent(new EditIngredientEvent(null));
 	}
 	@UiHandler("btnDelete")
 	void onBtnDeleteClick(ClickEvent event) {
